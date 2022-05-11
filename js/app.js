@@ -12,7 +12,7 @@ async function getPopularMovies() {
     var data = await callApi(DEFAULTAPIURL)
     showMovies(data.items)
     cache = data.items
-    return data
+    return data 
 }
 
 async function searchMovies(searchTerm) {    
@@ -25,9 +25,16 @@ async function searchMovies(searchTerm) {
 async function showMovies(movies){
     main.innerHTML = ''
     movies.forEach((movie)=>{
+        const card = document.createElement("div")
+        card.classList.add("card")
         const image = document.createElement("img")
         image.src = movie.image
-        main.appendChild(image)
+        image.loading = "lazy"
+        const title = document.createElement("p")
+        title.innerText = `${movie.title} (${movie.year})`
+        main.appendChild(card)        
+        card.appendChild(image)
+        card.appendChild(title)
     })
 }
 
