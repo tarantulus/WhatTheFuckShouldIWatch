@@ -1,3 +1,8 @@
+body{
+    background-color: #000033;
+}
 img{
-    width: .3 vw;
+    width: 10vw;
+    height: 25vh;
+    margin: 10px;
 }

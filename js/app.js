@@ -47,9 +47,7 @@ form.addEventListener("submit", (e) => {
     }
 })
 
-images.addEventListener("click", (e) => {
-    e.preventDefault();    
-})
+
 
 //check for saved movies
 
